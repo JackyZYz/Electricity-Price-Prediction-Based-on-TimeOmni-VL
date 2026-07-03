@@ -42,6 +42,14 @@ data/processed/
 *.jpg
 *.jpeg
 
+# Theory/reference large binaries
+理论/
+*.pdf
+*.docx
+*.doc
+*.pptx
+*.xlsx
+
 # Logs
 logs/
 *.log
