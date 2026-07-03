@@ -1,0 +1,4 @@
+eval:
+  metrics: ["mae", "rmse", "nmape", "direction"]
+  visualize: true
+  num_samples: 10

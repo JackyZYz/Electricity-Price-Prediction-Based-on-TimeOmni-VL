@@ -1,0 +1,26 @@
+bitsi:
+  image_size: 896
+  alpha: 0.5
+  c_mad: 0.6745
+  kappa: 4.0
+  color_map:
+    "统一结算点电价临时结果": "#FF0000"
+    "用户侧日前出清发布_出清电力": "#00FF00"
+    "短期系统负荷预测信息": "#0000FF"
+    "统调光电功率预测_太阳能": "#FFFF00"
+    "统调风电功率预测_风力": "#00FFFF"
+    "实际统调风光情况_光伏": "#FFD700"
+    "实际统调风光情况_风力": "#87CEEB"
+    "储能发电计划": "#FF00FF"
+    "燃机固定出力总值": "#FFA500"
+    "受电计划_华东": "#800080"
+    "正负备用空间_正备用": "#006400"
+    "正负备用空间_负备用": "#8B0000"
+  max_variables: null
+
+data:
+  frequency: 96
+  points_per_day: 96
+  context_days: 7
+  forecast_days: 1
+  target_variable: "统一结算点电价临时结果"

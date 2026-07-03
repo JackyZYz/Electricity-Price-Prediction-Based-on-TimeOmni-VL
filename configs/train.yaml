@@ -1,0 +1,52 @@
+data:
+  raw_data_dir: "Dataset"
+  output_dir: "data/processed"
+  frequency: 96
+  points_per_day: 96
+  context_days: 7
+  forecast_days: 1
+  long_context_days: 14
+  long_forecast_days: 3
+  target_variable: "统一结算点电价临时结果"
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  missing_threshold: 0.5
+  calendar_features: true
+  selected_variables: null
+
+model:
+  backbone: "mock"
+  model_path: null
+  device: "auto"
+  dtype: "bfloat16"
+
+bitsi:
+  image_size: 896
+  alpha: 0.5
+  c_mad: 0.6745
+  kappa: 4.0
+  color_map: {}
+  max_variables: null
+
+training:
+  lr: 3e-5
+  batch_size: 1
+  num_epochs: 2
+  warmup_ratio: 0.05
+  lambda_und: 1.0
+  lambda_gen: 1.0
+  gradient_accumulation_steps: 4
+  mixed_precision: "bf16"
+  max_grad_norm: 1.0
+  save_every: 1
+  eval_every: 1
+  lora_enabled: true
+  lora_rank: 8
+  lora_alpha: 16
+  lora_target_modules: ["q_proj", "v_proj"]
+
+eval:
+  metrics: ["mae", "rmse", "nmape", "direction"]
+  visualize: true
+  num_samples: 10

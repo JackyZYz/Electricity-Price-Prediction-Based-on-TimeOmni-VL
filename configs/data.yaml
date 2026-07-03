@@ -1,0 +1,16 @@
+data:
+  raw_data_dir: "Dataset"
+  output_dir: "data/processed"
+  frequency: 96
+  points_per_day: 96
+  context_days: 7
+  forecast_days: 1
+  long_context_days: 14
+  long_forecast_days: 3
+  target_variable: "统一结算点电价临时结果"
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  missing_threshold: 0.5
+  calendar_features: true
+  selected_variables: null
